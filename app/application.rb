@@ -1,11 +1,11 @@
-require 'pry'
+
 class Application
 
   def call(env)
     resp = Rack::Response.new
 
      val = Time.new
-    binding.pry
+  
     if val.hour <= 12
       resp.write "Good Morning!"
     else
